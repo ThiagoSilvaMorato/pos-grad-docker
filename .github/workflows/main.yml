@@ -29,6 +29,6 @@ jobs:
       - name: Build and push the image to AWS ECR
         id: build-and-push-image
         run: |
-          docker build -t widget-server:v3
+          docker build -t widget-server:v3 .
           docker tag widget-server:v3 711387117512.dkr.ecr.us-east-2.amazonaws.com/rocketseat/widget-server:v3
           docker push 711387117512.dkr.ecr.us-east-2.amazonaws.com/rocketseat/widget-server:v3
